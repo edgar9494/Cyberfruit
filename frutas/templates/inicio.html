@@ -1,62 +1,45 @@
-<!doctype html>
-<html>
-<head>
-  <title>Feria Ingresar</title> 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
-  <link rel="stylesheet" type="text/css" href="css/estilo oscuro.css">
-  <script src="javascript/funciones.js" type="text/Javascript"></script>
-</head>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/estilo oscuro.css' %}">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+   //$('.carousel').carousel();
+</script> 
 
-<body>
-  <header>  
-    <div id="menu">
-      <img src="Imagenes/Icono frutas 1.png" id="logo">
-      <img src="Imagenes/Letras4.png" id="letras">
-      <input type="checkbox" id="check1" onclick="burger()">
-      <label id="burger" for="check1" ><img src="Imagenes/Burger 3.png" width="55px" height="55px"></label>
-      <nav id="nav1">
-        <ul id="ul1">
-          <li id="li1"><a id="a1" href="Feria Inicio.html">Inicio</a></li>
-          <li id="li1"><a id="a1" href="Feria Mercado.html">Mercado</a></li>
-          <li id="li1"><a id="a1" href="Feria Contratos.html">Contratos</a></li>
-          <li id="li1"><a id="a1" href="Feria Subastas.html">Subastas</a></li>
-          <li id="li1"><a id="a1" href="">Cuenta</a>
-            <ul id="ul2">
-              <li id="li2"><a id="a2" href="Feria Perfil.html">Perfil</a></li>
-              <li id="li2"><a id="a2" href="Feria Ingresar.html">Ingresar</a></li>
-              <li id="li2"><a id="a2" href="Feria Registrarse.html">Registrse</a></li>
-              <li id="li2"><a id="a2" href="Feria Estadisticas.html">Estadisticas</a></li>
-              <li id="li2"><a id="a2" href="">Ajustes</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header><br>
-  
   <div id="caja0">  
-    <div id="caja1">  <!--Caja de inicio de sesión y mensajes-->
-      <div class="row">
-        <div class="col-lg-4" id="cajares"></div>
-        <div class="col-lg-4" id="cajares">
-          <h3>Iniciar sesión</h3> 
-          <div id="caja_perfil">
-            <img src="Imagenes/Perfil 2.jpg" width="100%">
-          </div>
-          <label>Nombre de usuario</label>
-          <input type="text" name = "usuario" id="usuario" placeholder="---">
-          <label>Contraseña</label>
-          <input type="password" name = "contraseña" id="cont" placeholder="---">
-          <br><br>
-          <button id="boton1" onclick="Ingresar()"><h1>Ingresar</h1></button>
-          <button id="boton1" onclick="Salir()"><h1>Salir</h1></button>
-          <br>
-        </div>
-        <div class="col-lg-4" id="cajares"></div>
-      </div>
-    </div>  
+    <h3>Encuentra todas las frutas que desees de Chile exportadas a todo el mundo</h3>
+        <div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Primer slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#2196f3"></rect><text x="45%" y="50%" fill="#eceff1" dy=".3em">Primer slide</text></svg>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Segundo slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#f50057"></rect><text x="45%" y="50%" fill="#eceff1" dy=".3em">Segundo slide</text></svg>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Tercer slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#ff3d00"></rect><text x="45%" y="50%" fill="#eceff1" dy=".3em">Tercer slide</text></svg>
+            </div>
+            </div>
+            
+            <!--Controles NEXT y PREV-->
+            <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            <!--Controles de indicadores-->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel1" data-slide-to="1"></li>
+                <li data-target="#carousel1" data-slide-to="2"></li>
+            </ol>
+            
+        </div> 
   </div>   
-</body>
-</html>
+{% endblock %}

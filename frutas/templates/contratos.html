@@ -1,41 +1,7 @@
-<!doctype html>
-<html>
-<head>
-  <title>Feria Contratos</title> 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
-  <link rel="stylesheet" type="text/css" href="css/estilo oscuro.css">
-  <script src="javascript/funciones.js" type="text/Javascript"></script>
-</head>
-
-<body>
-  <header>  
-    <div id="menu">
-      <img src="Imagenes/Icono frutas 1.png" id="logo">
-      <img src="Imagenes/Letras4.png" id="letras">
-      <input type="checkbox" id="check1" onclick="burger()">
-      <label id="burger" for="check1" ><img src="Imagenes/Burger 3.png" width="55px" height="55px"></label>
-      <nav id="nav1">
-        <ul id="ul1">
-          <li id="li1"><a id="a1" href="Feria Inicio.html">Inicio</a></li>
-          <li id="li1"><a id="a1" href="Feria Mercado.html">Mercado</a></li>
-          <li id="li1"><a id="a1" href="Feria Contratos.html">Contratos</a></li>
-          <li id="li1"><a id="a1" href="Feria Subastas.html">Subastas</a></li>
-          <li id="li1"><a id="a1" href="">Cuenta</a>
-            <ul id="ul2">
-              <li id="li2"><a id="a2" href="Feria Perfil.html">Perfil</a></li>
-              <li id="li2"><a id="a2" href="Feria Ingresar.html">Ingresar</a></li>
-              <li id="li2"><a id="a2" href="Feria Registrarse.html">Registrse</a></li>
-              <li id="li2"><a id="a2" href="Feria Estadisticas.html">Estadisticas</a></li>
-              <li id="li2"><a id="a2" href="">Ajustes</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header><br>
-  
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/estilo oscuro.css' %}">
   <div id="caja0">
     <div id="caja1"> <!--Caja para registrarse como usuario-->
       <h3>Contratos</h3>
@@ -93,5 +59,4 @@
       </form>
     </div>
   </div>      
-</body>
-</html>
+{% endblock %}
