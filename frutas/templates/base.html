@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  {% load static %}  
+  <head>
+    {% block title %}<title>Cyberfruit</title>{% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/estilo oscuro.css' %}">
+    <link rel="stylesheet" href="{% static 'css/carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css.map.css' %}">
+    <script src="{% static 'javascript/funciones.js' %}"></script>
+  </head>
+  <body>  
+    <header>  
+      <div id="menu">
+        <img src="{% static 'Imagenes/Icono frutas 1.png' %}" id="logo">
+        <img src="{% static 'Imagenes/Letras6.png' %}" id="letras">
+        <input type="checkbox" id="check1" onclick="burger()">
+        <label id="burger" for="check1" ><img src="{% static 'Imagenes/Burger 3.png' %}" width="55px" height="55px"></label>
+        <nav id="nav1">
+          <ul id="ul1">
+            <li id="li1"><a id="a1" href="{% url 'inicio' %}">Inicio</a></li>
+            <li id="li1"><a id="a1" href="{% url 'mercado' %}">Mercado</a></li>
+            <li id="li1"><a id="a1" href="{% url 'contratos' %}">Contratos</a></li>
+            <li id="li1"><a id="a1" href="{% url 'subastas' %}">Subastas</a></li>
+            <li id="li1"><a id="a1" href="">Cuenta</a>
+              <ul id="ul2">
+                <li id="li2"><a id="a2" href="{% url 'perfil' %}">Perfil</a></li>
+                <li id="li2"><a id="a2" href="{% url 'ingresar' %}">Ingresar</a></li>
+                <li id="li2"><a id="a2" href="{% url 'registrar' %}">Registrar</a></li>
+                <li id="li2"><a id="a2" href="{% url 'estadisticas' %}">Estadisticas</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header><br>
+    {% block content %}{% endblock %}
+  </body>
+</html>  

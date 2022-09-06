@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/estilo oscuro.css' %}">
+  <div id="caja0"> 
+    <div id="caja_buscar">
+      <h3>Crear o buscar venta</h3>
+      <hr>
+      <label>Productor</label>
+      <input type="text" id ="prod" name="productor" placeholder="---">
+      <br>
+      <label>Tipo de fruta</label>
+      <input placeholder="---">
+      <br>
+      <label>Cantidad de frutas</label>
+      <input placeholder="---">
+      <br>
+      <label>Valor</label>
+      <input placeholder="---">
+      <br>
+      <label>Región</label>
+      <select id="region" name="region">
+        <option value="">---</option>
+        <option value="1">I Región</option>
+        <option value="2">II Región</option>
+        <option value="3">III Región</option>
+        <option value="4">IV Región</option>
+        <option value="5">V Región</option>
+        <option value="6">VI Región</option>
+        <option value="7">VII Región</option>
+        <option value="8">VIII Región</option>
+        <option value="9">IX Región</option>
+        <option value="10">X Región</option>
+        <option value="11">XI Región</option>
+        <option value="12">XII Región</option>
+        <option value="13">Region Metropolitana</option>
+        <option value="14">XIV Región</option>
+        <option value="15">XV Región</option>
+        <option value="16">XVI Región</option>
+      </select>
+      <br>
+      <label>Provincia</label>
+      <select id="prov" name="prov">
+       <option value="">---</option>
+       <option value="1">Recoleta</option>
+       <option value="2">Providencia</option>
+       <option value="3">Maipú</option>
+       <option value="4">Melipilla</option>
+       <option value="5">Santiago</option>
+       <option value="6">Talagante</option>
+      </select>
+       
+      <div class="form-group">
+        <label>Tipo de mercado</label>
+        <br>
+        <div id="caja_check">
+          <label class="form-check-label" for="Si1">Inter</label>
+          <div class="form-check1"><input class="form-check-input"  type="radio" name="copia1" value="Si1"  id="Si1"  /> </div>
+          <br>
+          <label class="form-check-label" for="No1">Local</label>
+          <div class="form-check1"><input class="form-check-input"  type="radio" name="copia1" value="No1"  id="No1"  /> </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>aaa</label> 
+        <br>
+        <div id="caja_check">
+          <label class="form-check-label" for="Si2">Si</label>
+          <div class="form-check1"><input class="form-check-input"  type="radio" name="copia2" value="Si2"  id="Si2"  /> </div>
+          <br>
+          <label class="form-check-label" for="No2">No</label>
+          <div class="form-check1"><input class="form-check-input"  type="radio" name="copia2" value="No2"  id="No2"  /> </div>
+        </div>
+      </div>
+
+      <br><br>
+      <button id="boton2" onclick="buscador()">Crear o buscar</button>
+      <br><br>
+    </div>
+    
+
+    <div id="caja_buscar2">
+      <table>
+        <tr>
+          <th><h1>Productor</h1></th>
+          <th><h1>Fruta</h1></th>
+          <th><h1>Cantidad</h1></th>
+          <th><h1>Valor</h1></th>
+          
+        </tr>
+        <tr>
+          <td>
+            <a href="" target="_self">
+              <button style="color: white; background-color: #101010; width: 100%; height: 100%;">Fruit44</button>
+            </a>
+          </td>
+          <td>Tomate</td>
+          <td>1000</td>
+          <td>345345</td>
+        </tr>
+        <tr>
+          <td>Frutas_4342</td>
+          <td>Manzana</td>
+          <td>500</td>
+          <td>101000</td>
+        </tr>
+        <tr>
+          <td>Natural_43</td>
+          <td>Naranja</td>
+          <td>100</td>
+          <td>10000</td>
+        </tr>
+      </table>
+    </div> 
+  </div>
+  
+{% endblock %}

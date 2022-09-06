@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+  <title>Feria Contratos</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="css/estilo oscuro.css">
+  <script src="javascript/funciones.js" type="text/Javascript"></script>
+</head>
+
+<body>
+  <header>  
+    <div id="menu">
+      <img src="Imagenes/Icono frutas 1.png" id="logo">
+      <img src="Imagenes/Letras4.png" id="letras">
+      <input type="checkbox" id="check1" onclick="burger()">
+      <label id="burger" for="check1" ><img src="Imagenes/Burger 3.png" width="55px" height="55px"></label>
+      <nav id="nav1">
+        <ul id="ul1">
+          <li id="li1"><a id="a1" href="Feria Inicio.html">Inicio</a></li>
+          <li id="li1"><a id="a1" href="Feria Mercado.html">Mercado</a></li>
+          <li id="li1"><a id="a1" href="Feria Contratos.html">Contratos</a></li>
+          <li id="li1"><a id="a1" href="Feria Subastas.html">Subastas</a></li>
+          <li id="li1"><a id="a1" href="">Cuenta</a>
+            <ul id="ul2">
+              <li id="li2"><a id="a2" href="Feria Perfil.html">Perfil</a></li>
+              <li id="li2"><a id="a2" href="Feria Ingresar.html">Ingresar</a></li>
+              <li id="li2"><a id="a2" href="Feria Registrarse.html">Registrse</a></li>
+              <li id="li2"><a id="a2" href="Feria Estadisticas.html">Estadisticas</a></li>
+              <li id="li2"><a id="a2" href="">Ajustes</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header><br>
+  
+  <div id="caja0">
+    <div id="caja1"> <!--Caja para registrarse como usuario-->
+      <h3>Contratos</h3>
+      <form action="index.html" method="post" name="datos" onsubmit="return validacion()">
+        <div class="row">
+          <div class="col-lg-4" id="cajares"></div>
+              
+          <div class="col-lg-4" id="cajares">
+            <label>Numero de contrato</label>
+            <input type="number" name="numero de contrato" id ="num_con" placeholder="---">
+            <br>
+            <label>Rut</label>
+            <input type="number" name="rut" id ="rut" placeholder="---">
+            <br>
+            <label>Nombres</label>
+            <br>
+            <input type="text" name="nombres" id ="nom" placeholder="---">
+            <br>
+            <label>Apellidos</label>
+            <br>
+            <input type="text" name="apellidos" id ="ape" placeholder="---">
+            <br>
+            <label>Cargo</label>
+            <br>
+            <input type="text" name="cargo" id ="car" placeholder="---">
+            <br>
+            <label>Sueldo bruto</label>
+            <br>
+            <input type="number" name="Sueldo bruto" id="sueldo_b" placeholder="---">
+            <br>
+            <label>Duracion</label>
+            <br>
+            <input type="text" name="duracion" id="dur" placeholder="---">
+            <br>
+            <label>Fecha de inicio</label>
+            <br>
+            <input type="date" name="fecha inicio" id="fecha_i" placeholder="---">
+            <br>
+            <label>Fecha de termino</label>
+            <br>
+            <input type="date" name="fecha termino" id="fecha_t" placeholder="---">
+            <br>
+            <label>Documento</label>
+            <input type="file">
+            <br><br>
+            <button id="boton1" type="submit"><h1>Crear</h1></button>
+            <button id="boton1"><h1>Actualizar</h1></button>
+            <button id="boton1"><h1>Buscar</h1></button>
+            <button id="boton1"><h1>Eliminar</h1></button>
+          </div>
+        
+          <div class="col-lg-4" id="cajares"></div>
+
+        </div>  
+      </form>
+    </div>
+  </div>      
+</body>
+</html>
